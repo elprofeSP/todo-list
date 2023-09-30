@@ -8,7 +8,7 @@ import { updateStatics } from "./services/updateStatics";
 
 // Evento DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
-  getTasks("https://jsonplaceholder.typicode.com/todos", 0, 4);
+  getTasks("http://localhost:3000/tasks");
 });
 
 // Evento submit
