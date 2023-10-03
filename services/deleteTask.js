@@ -9,18 +9,16 @@ export function deleteTask(id) {
       if (!response.ok) {
         throw new Error("Ha ocurrido un error al eliminar la tarea");
       }
-      return response.json();
     })
-    .then((data) => {
+    .then(() => {
       // Eliminar la tarea del DOM
       document.getElementById(id).remove();
       // Actualizar las estadísticas
       updateStatics();
       // Mostrar un mensaje de éxito
-      alert(data.message);
+      alert("Tarea eliminada correctamente");
     })
     .catch((error) => {
-      console.log(error);
       alert(error.message);
     });
 }

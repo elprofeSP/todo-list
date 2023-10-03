@@ -1,6 +1,10 @@
 import { updateStatics } from "./updateStatics";
 
 export function completeTask(id, checked) {
+  fetch(`http://localhost:3000/tasks/${id}`, {
+    method: "PUT",
+    
+  })
   // Seleccionar la tarea a completar
   const taskToComplete = document.getElementById(id);
   if (checked) {
